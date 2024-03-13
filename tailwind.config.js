@@ -6,11 +6,12 @@ module.exports = {
     extend: {
       colors: {
         "brown": {
+          10: "#5D5553",
           100: "#ECE0D1",
           300: "#DBC1AC",
           600: "#967259",
           900: "#634832",
-        }
+        },
       },
       boxShadow: {
         "normal": "0px 1px 10px rgba(0, 0, 0, 0.5)"

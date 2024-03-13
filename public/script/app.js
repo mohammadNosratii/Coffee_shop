@@ -27,12 +27,44 @@ window.addEventListener("load", function () {
   }
 });
 
-// menu items
 
-// const navIcon = $.querySelector(".nav-icon")
-// const menu = $.querySelector(".menu")
+// open menu btn
 
-// navIcon.addEventListener("click",function() {
-//     menu.classList.add("visible")
-//     menu.classList.remove("hidden")
-// })
+const navIcon = $.querySelector(".nav-icon")
+const menu = $.querySelector(".menu")
+
+navIcon.addEventListener("click",function() {
+menu.classList.add("right-0")
+menu.classList.remove("-right-72")
+})
+
+// close menu btn
+
+const closeMenuBtn = $.querySelector(".close-menu-btn")
+
+closeMenuBtn.addEventListener("click",function() {
+  menu.classList.remove("right-0")
+menu.classList.add("-right-72")
+})
+
+// menu items 
+
+const dropDownBtn = $.querySelector(".drop-down-menu")
+const chevronDownIcon = $.querySelector(".chevron-down-icon")
+const dropDownItems = $.querySelector(".drop-down-items")
+
+function dropDownHandler (event) {
+  event.preventDefault()
+  if (chevronDownIcon.className.includes("rotate-180")) {
+    chevronDownIcon.classList.remove("rotate-180")
+    dropDownItems.classList.remove("flex")
+    dropDownItems.classList.add("hidden")
+  } else {
+    chevronDownIcon.classList.add("rotate-180")
+    dropDownItems.classList.add("flex")
+    dropDownItems.classList.remove("hidden")
+  }
+  
+}
+
+dropDownBtn.addEventListener("click",dropDownHandler)
