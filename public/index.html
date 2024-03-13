@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/app.css" />
+    <title>coffee-shop</title>
+    <link rel="icon" href="./images/svgs/app-logo.svg" />
+  </head>
+  <body class="font-sans bg-gray-100 dark:bg-zinc-800">
+    <!-- All icon -->
+    <svg class="hidden">
+      <symbol
+        id="shopping-cart"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+        />
+      </symbol>
+      <symbol
+        id="moon"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+        />
+      </symbol>
+      <symbol
+        id="sun"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+        />
+      </symbol>
+      <symbol
+        id="arrow-left"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15"
+        />
+      </symbol>
+      <symbol
+        id="cart-arrow"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 19.5 8.25 12l7.5-7.5"
+        />
+      </symbol>
+      <symbol
+        id="bars-3"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        />
+      </symbol>
+      <symbol
+        id="x-mark"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18 18 6M6 6l12 12"
+        />
+      </symbol>
+    </svg>
+
+    <header
+      class="fixed top-9 right-0 left-0 hidden md:flex items-center w-[98%] lg:w-[90%] h-16 mx-auto px-5 lg:px-10 py-10 rounded-3xl bg-black/50 backdrop-blur-[6px]"
+    >
+      <div class="w-full flex justify-between">
+        <!-- logo & menu -->
+        <nav class="flex items-center gap-x-5 md:gap-x-7 lg:gap-x-9 h-14">
+          <!-- logo -->
+          <div class="shrink-0">
+            <img src="./images/svgs/app-logo.svg" alt="" />
+          </div>
+
+          <!-- menu -->
+          <ul
+            class="flex gap-x-5 md:gap-x-7 xl:gap-x-9 h-full text-lg text-gray-300 tracking-tightest child:leading-[56px]"
+          >
+            <li class="text-orange-200">
+              <a href="">صفحه اصلی</a>
+            </li>
+
+            <li class="relative group">
+              <!-- has sub -->
+              <a
+                href="#"
+                class="group-hover:text-orange-300 transition-colors duration-500"
+                >فروشگاه</a
+              >
+
+              <!-- sunmenu -->
+              <div
+                class="absolute top-full transition-all duration-500 delay-75 opacity-0 invisible group-hover:opacity-100 group-hover:visible w-52 p-6 space-y-4 text-zinc-700 dark:text-white bg-white dark:bg-zinc-700 text-base rounded-2xl border-t-[3px] border-orange-300 child:inline-block tracking-normal shadow-normal child:transition-colors child-hover:text-orange-300"
+              >
+                <a href="#">قهوه ویژه</a>
+                <a href="#">ویژه در سطح جهانی</a>
+                <a href="#">قهوه درجه یک</a>
+                <a href="#">ترکیبات تجاری</a>
+                <a href="#">کپسول قهوه</a>
+                <a href="#">قهوه زینو برزیلی</a>
+              </div>
+            </li>
+
+            <li>
+              <a href="">دیکشنری</a>
+            </li>
+            <li>
+              <a href="">بلاگ</a>
+            </li>
+            <li>
+              <a href="">درباره ما</a>
+            </li>
+            <li>
+              <a href="">تماس با ما</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- cart & theme & login -->
+        <div
+          class="flex items-center justify-end text-orange-200 gap-x-4 md:gap-x-6 xl:gap-x-10"
+        >
+          <!-- cart & switch theme -->
+          <div class="flex items-center gap-x-5">
+            <!-- cart -->
+            <div class="relative group">
+              <!-- cart icon hover -->
+              <div class="py-4 cursor-pointer">
+                <svg class="w-6 h-6">
+                  <use href="#shopping-cart"></use>
+                </svg>
+              </div>
+
+              <!-- cart box -->
+              <div
+                class="absolute top-full left-0 w-96 transition-all duration-500 delay-75 invisible opacity-0 group-hover:opacity-100 group-hover:visible p-6 text-zinc-700 dark:text-white bg-white dark:bg-zinc-700 rounded-2xl border-t-[3px] border-orange-300 shadow-normal child:transition-colors"
+              >
+                <!-- cart header -->
+                <div
+                  class="flex items-center justify-between text-xs tracking-tighter"
+                >
+                  <span class="text-gray-300">2 مورد</span>
+                  <div class="flex items-center text-orange-300">
+                    <a href="#">مشاهده سبد خرید</a>
+                    <svg class="w-3 h-3">
+                      <use href="#cart-arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- cart body -->
+                <div
+                  class="max-h-52 overflow-y-scroll border-b pb-1 divide-y divide-gray-100 dark:divide-white/10 child:py-5"
+                >
+                  <div class="flex items-center justify-between">
+                    <img
+                      class="w-44 h-32"
+                      src="./images/products/p2.png"
+                      alt=""
+                    />
+                    <div class="space-y-8">
+                      <h3 class="text-zinc-700 dark:text-white line-clamp-2">
+                        قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
+                      </h3>
+                      <div class="child:block space-y-1">
+                        <span
+                          class="text-xs text-teal-600 dark:text-emerald-500 tracking-tighter"
+                          >14,500 تومان تخفیف</span
+                        >
+                        <span class="text-lg text-zinc-700 dark:text-white"
+                          >175,000 تومان</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <img
+                      class="w-44 h-32"
+                      src="./images/products/p1.png"
+                      alt=""
+                    />
+                    <div class="space-y-8">
+                      <h3 class="text-zinc-700 dark:text-white line-clamp-2">
+                        قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
+                      </h3>
+                      <div class="child:block space-y-1">
+                        <span
+                          class="text-xs text-teal-600 dark:text-emerald-500 tracking-tighter"
+                          >14,500 تومان تخفیف</span
+                        >
+                        <span class="text-lg text-zinc-700 dark:text-white"
+                          >175,000 تومان</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <img
+                      class="w-44 h-32"
+                      src="./images/products/p3.png"
+                      alt=""
+                    />
+                    <div class="space-y-8">
+                      <h3 class="text-zinc-700 dark:text-white line-clamp-2">
+                        قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
+                      </h3>
+                      <div class="child:block space-y-1">
+                        <span
+                          class="text-xs text-teal-600 dark:text-emerald-500 tracking-tighter"
+                          >14,500 تومان تخفیف</span
+                        >
+                        <span class="text-lg text-zinc-700 dark:text-white"
+                          >175,000 تومان</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- cart footer -->
+                <div class="flex items-center justify-between mt-5">
+                  <div class="flex flex-col space-y-1">
+                    <span class="text-xs text-gray-300 tracking-tighter"
+                      >مبلغ قابل پرداخت</span
+                    >
+                    <span>350,000 تومان</span>
+                  </div>
+                  <a
+                    href="#"
+                    class="w-[144px] h-14 flex items-center justify-center text-lg text-white bg-teal-600 dark:bg-emerald-500 hover:bg-teal-700 dark:hover:bg-emerald-600 transition-colors rounded-xl tracking-tightest"
+                    >ثبت سفارش</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- theme switch btn -->
+            <div class="switch-theme">
+              <svg class="w-6 h-6 cursor-pointer">
+                <use class="theme-icon" href="#moon"></use>
+              </svg>
+            </div>
+          </div>
+
+          <span class="block w-px h-14 bg-white/20"></span>
+
+          <!-- login link -->
+          <div class="flex items-center gap-x-2.5 tracking-tightest">
+            <svg class="w-6 h-6 rotate-180">
+              <use href="#arrow-left"></use>
+            </svg>
+            <a href="" class="hidden lg:inline-block"> ورود | ثبت نام</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div
+      class="flex md:hidden items-center justify-between h-16 px-4 bg-white dark:bg-zinc-700"
+    >
+      <!-- nav icon -->
+      <div class="nav-icon">
+        <svg class="w-8 h-8 text-zinc-700 dark:text-white">
+          <use href="#bars-3"></use>
+        </svg>
+      </div>
+
+      <!-- menu -->
+      <div class="menu flex flex-col justify-between fixed top-0 right-0 w-64 py-3 px-4 min-h-screen bg-white dark:bg-zinc-700 z-20">
+        
+        <!-- menu logo & close btn -->
+            <div class="flex items-center justify-between pb-5 mb-6 border-b border-b-gray-100 dark:border-b-white/10">
+          <div class="flex items-center gap-x-3.5">
+            <img src="./images/svgs/app-logo.svg" alt="" />
+            <img src="./images/svgs/app-logo-type.svg" alt="" />
+          </div>
+          <div>
+            <svg class="w-5 h-5 text-zinc-600 dark:text-white">
+              <use href="#x-mark"></use>
+            </svg>
+          </div>
+            </div>
+
+            <!-- menu items -->
+            <div></div>
+
+        <!-- login link & theme & cart  -->
+            <div class="border-t space-y-6 pt-8 px-2.5 mt-8 border-t-gray-100 dark:border-t-white/10 text-orange-300">
+
+                <div class="flex items-center gap-x-2">
+            <svg class="w-5 h-5 rotate-180">
+              <use href="#arrow-left"></use>
+            </svg>
+            <a href="#">ورود | ثبت نام</a>
+                </div>
+
+
+                <div class="switch-theme inline-block">
+                    <div class="flex items-center gap-x-2 dark:hidden">
+                        <svg class="w-5 h-5">
+                          <use href="#moon"></use>
+                        </svg>
+                        <a href="#">تم تیره</a>
+                    </div>
+                    <div class="hidden dark:flex items-center gap-x-2">
+                        <svg class="w-5 h-5">
+                          <use href="#sun"></use>
+                        </svg>
+                        <a href="#">تم روشن</a>
+                    </div>
+                </div>
+        
+
+                <div class="flex items-center gap-x-2">
+            <svg class="w-5 h-5">
+              <use href="#shopping-cart"></use>
+            </svg>
+            <a href="#">سبد خرید</a>
+                </div>
+
+            </div>
+
+      </div>
+
+      <!-- website logo -->
+      <div>
+        <img src="./images/svgs/app-logo-type.svg" alt="" />
+      </div>
+
+      <!-- shop icon -->
+      <div>
+        <svg class="w-8 h-8 text-zinc-700 dark:text-white">
+          <use href="#shopping-cart"></use>
+        </svg>
+      </div>
+    </div>
+
+    <div
+      class="md:hidden overlay fixed inset-0 w-full h-full bg-black/40 z-10"
+    ></div>
+
+    <script src="./script/app.js"></script>
+  </body>
+</html>
