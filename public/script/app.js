@@ -27,44 +27,42 @@ window.addEventListener("load", function () {
   }
 });
 
+// open menu btn // close menu btn
 
-// open menu btn
+const navIcon = $.querySelector(".nav-icon");
+const menu = $.querySelector(".menu");
+const closeMenuBtn = $.querySelector(".close-menu-btn");
+const overlay = $.querySelector(".overlay");
 
-const navIcon = $.querySelector(".nav-icon")
-const menu = $.querySelector(".menu")
+navIcon.addEventListener("click", function () {
+  menu.classList.add("right-0");
+  menu.classList.remove("-right-64");
+  overlay.classList.add("overlay-visible");
+});
 
-navIcon.addEventListener("click",function() {
-menu.classList.add("right-0")
-menu.classList.remove("-right-72")
-})
-
-// close menu btn
-
-const closeMenuBtn = $.querySelector(".close-menu-btn")
-
-closeMenuBtn.addEventListener("click",function() {
-  menu.classList.remove("right-0")
-menu.classList.add("-right-72")
-})
-
-// menu items 
-
-const dropDownBtn = $.querySelector(".drop-down-menu")
-const chevronDownIcon = $.querySelector(".chevron-down-icon")
-const dropDownItems = $.querySelector(".drop-down-items")
-
-function dropDownHandler (event) {
-  event.preventDefault()
-  if (chevronDownIcon.className.includes("rotate-180")) {
-    chevronDownIcon.classList.remove("rotate-180")
-    dropDownItems.classList.remove("flex")
-    dropDownItems.classList.add("hidden")
-  } else {
-    chevronDownIcon.classList.add("rotate-180")
-    dropDownItems.classList.add("flex")
-    dropDownItems.classList.remove("hidden")
-  }
-  
+function closeMenuHandler () {
+  menu.classList.remove("right-0");
+  menu.classList.add("-right-64");
+  overlay.classList.remove("overlay-visible");
 }
 
-dropDownBtn.addEventListener("click",dropDownHandler)
+closeMenuBtn.addEventListener("click", closeMenuHandler)
+overlay.addEventListener("click", closeMenuHandler)
+
+// menu items
+
+const dropDownBtn = $.querySelector(".submenu"); 
+const dropDownItems = $.querySelector(".submenu-open");
+const subMenuActive = $.querySelector(".submenu-active");
+
+function dropDownHandler() {
+  dropDownBtn.classList.toggle("rotate-180");
+  dropDownItems.classList.toggle("max-h-screen");
+  dropDownItems.classList.toggle("max-h-0");
+  dropDownItems.classList.toggle("mt-4");
+  dropDownItems.classList.toggle("overflow-scroll");
+  dropDownItems.classList.toggle("overflow-hidden");
+  subMenuActive.classList.toggle("text-orange-300");
+}
+
+dropDownBtn.addEventListener("click", dropDownHandler);

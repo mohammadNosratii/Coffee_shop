@@ -339,10 +339,9 @@
         </svg>
       </div>
 
-      <!-- menu -->
-      <div class="menu flex flex-col fixed top-0 -right-72 w-64 py-4 px-4 h-[100vh] overflow-y-auto transition-all duration-500 bg-white dark:bg-zinc-700 z-20">
-        
-        <!-- menu logo & close btn -->
+      <!-- nav -->
+      <div class="menu flex flex-col fixed top-0 -right-64 w-64 pt-3 px-4 h-[100vh] overflow-y-auto transition-all duration-500 bg-white dark:bg-zinc-700 z-20">
+        <!-- nav header -->
             <div class="flex items-center justify-between pb-5 mb-6 border-b border-b-gray-100 dark:border-b-white/10">
           <div class="flex items-center gap-x-3.5">
             <img src="./images/svgs/app-logo.svg" alt="" />
@@ -354,13 +353,13 @@
             </svg>
           </div>
             </div>
+ 
+            <!-- nav menu -->
+            <div class="text-zinc-700 dark:text-white">
+              <ul class="flex flex-col space-y-6 text-xl child:px-2.5">
 
-            <!-- menu items -->
-            <div class="px-2.5 text-black dark:text-white">
-              <ul class="flex flex-col space-y-8 text-xl">
-
-                <li>
-                  <div class="text-lg flex items-center gap-x-2 p-2 bg-orange-50 dark:bg-brown-10 text-orange-300 rounded-md" >
+                <li class="bg-orange-200/20 rounded-md">
+                  <div class="text-lg flex items-center gap-x-2 h-10 text-orange-300 " >
                     <svg class="w-5 h-5">
                       <use href="#home"></use>
                     </svg>
@@ -368,16 +367,16 @@
                   </div>
                 </li>
 
-                <!-- dropDown title -->
+          
                   <li> 
-                    <div class="drop-down-menu flex items-center px-2 justify-between text-orange-300" >
-                      <div class="flex items-center gap-x-2">
+                    <div class="flex items-center justify-between" >
+                      <div class="flex items-center gap-x-2 submenu-active transition-all duration-500">
                         <svg class="w-5 h-5">
                           <use href="#shopping-bag"></use>
                         </svg>
                         <a href="">فروشگاه</a>
                       </div>
-                      <div class="chevron-down-icon transition-all duration-500">
+                      <div class="submenu transition-all duration-500">
                         <svg class="w-4 h-4 cursor-pointer">
                           <use href="#chevron-down"></use>
                         </svg>                        
@@ -385,27 +384,15 @@
                     </div>
 
                     <!-- dropDown shop items -->
-                    <ul class="drop-down-items flex-col hidden gap-y-4 pt-4 px-7 text-zinc-700 dark:text-white text-sm">
-                      <li>
-                        <a class="" href="">قهوه ویژه</a>
-                      </li>
-                      <li class="list-disc text-orange-300">
-                        <a href="">ویژه درسطح جهانی</a>
-                      </li>
-                      <li>
-                        <a href="">ثهوه درجه یک</a>
-                      </li>
-                      <li>
-                        <a href="">ترکیبات تجاری</a>
-                      </li>
-                      <li>
-                        <a href="">کپسول قهوه</a>
-                      </li>
-                      <li>
-                        <a href="">قهوه زینو برزیلی</a>
-                      </li>
-                    </ul>
-                </li>
+                    <div class="submenu-open overflow-hidden transition-all duration-500 max-h-0 flex flex-col gap-y-3 pr-7 text-zinc-600 dark:text-white text-sm">
+                      <a href="">قهوه ویژه</a>
+                      <a class="submenu-item-active" href="">ویژه درسطح جهانی</a>
+                      <a href="">ثهوه درجه یک</a>
+                      <a href="">ترکیبات تجاری</a>
+                      <a href="">کپسول قهوه</a>
+                      <a href="">قهوه زینو برزیلی</a>
+                    </div>
+                </li> 
 
                 <li>
                   <div class="flex items-center gap-x-2" >
@@ -446,8 +433,8 @@
               </ul>
             </div>
 
-        <!-- login link & theme & cart  -->
-            <div class="border-t space-y-6 pt-8 px-2.5 mt-8 border-t-gray-100 dark:border-t-white/10 text-orange-300">
+        <!-- nav footer  -->
+            <div class="border-t space-y-6 py-8 px-2.5 mt-8 border-t-gray-100 dark:border-t-white/10 text-orange-300">
 
                 <div class="flex items-center gap-x-2">
             <svg class="w-5 h-5 rotate-180">
@@ -481,7 +468,6 @@
                 </div>
 
             </div>
-
       </div>
 
       <!-- website logo -->
@@ -497,9 +483,9 @@
       </div>
     </div>
 
-    <!-- <div
-      class="md:hidden overlay fixed inset-0 w-full h-full bg-black/40 z-10"
-    ></div> -->
+    <div
+      class="overlay"
+    ></div>
 
     <script src="./script/app.js"></script>
   </body>

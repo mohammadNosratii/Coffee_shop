@@ -2,12 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
+  body {
+    background-image: url(../images/headerBgDesktop.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
 
-    body {
-        background-image: url(../images/headerBgDesktop.webp);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+@layer components {
+  .submenu-item-active {
+    @apply relative text-orange-300 pr-2.5;
+  }
+  .submenu-item-active::after {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background-color: #fdba74;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .overlay {
+    @apply invisible opacity-0 md:hidden fixed inset-0 bg-black/60 z-10 transition-all duration-500;
+  }
+  .overlay-visible {
+    @apply visible opacity-100;
+  }
 }
