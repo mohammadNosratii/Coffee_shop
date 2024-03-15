@@ -50,4 +50,11 @@
       height: 900px;
     }
   }
+  .categories-img-left {
+    background: linear-gradient(rgba(33, 33, 33, 0.6),rgba(33, 33, 33, 0.6)),url(../images/categories/category-left.jpg);
+    
+  }
+  .categories-img-right {
+    background: linear-gradient(rgba(33, 33, 33, 0.6),rgba(33, 33, 33, 0.6)),url(../images/categories/category-right.jpg);
+  }
 }
