@@ -27,7 +27,7 @@ window.addEventListener("load", function () {
   }
 });
 
-// open menu btn // close menu btn
+// open/close menu btn
 
 const navIcon = $.querySelector(".nav-icon");
 const menu = $.querySelector(".menu");
@@ -66,3 +66,25 @@ function dropDownHandler() {
 }
 
 dropDownBtn.addEventListener("click", dropDownHandler);
+
+
+// open/close shopping cart
+
+const shoppingCartOpenBtn = $.querySelector(".cart-icon")
+const shoppingCart = $.querySelector(".shopping-cart")
+const shoppingCartCloseBtn = $.querySelector(".shopping-cart-close-btn")
+
+shoppingCartOpenBtn.addEventListener("click", function() {
+  shoppingCart.classList.add("left-0")
+  shoppingCart.classList.remove("-left-64")
+  overlay.classList.add("overlay-visible");
+})
+
+function closeShoppingCartHandler () {
+  shoppingCart.classList.remove("left-0")
+  shoppingCart.classList.add("-left-64")
+   overlay.classList.remove("overlay-visible");
+}
+
+shoppingCartCloseBtn.addEventListener("click",closeShoppingCartHandler)
+overlay.addEventListener("click",closeShoppingCartHandler)

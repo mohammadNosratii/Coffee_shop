@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    background-image: url(../images/headerBgDesktop.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
 
 @layer components {
   .submenu-item-active {
@@ -32,5 +25,29 @@
   }
   .overlay-visible {
     @apply visible opacity-100;
+  }
+  .circle {
+    @apply hidden md:flex items-center justify-center border rounded-full;
+  }
+  .circle-lg {
+    @apply translate-y-2/4 absolute bottom-0 right-0 left-0 mx-auto w-[203px] h-[203px] border-white/25;
+  }
+  .circle-md {
+    @apply w-[145px] h-[145px] border-white/50;
+  }
+  .circle-sm {
+    @apply w-[95px] h-[95px] border-white/80;
+  }
+  @media screen and (min-width:768px) {
+    html.dark .products {
+      background-image: url(../images/products-bg.png);
+    }
+  
+    .products{
+      background:linear-gradient(rgba(243, 244, 246,0.65),rgba(243, 244, 244,0.65)),url(../images/products-bg.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      height: 900px;
+    }
   }
 }
