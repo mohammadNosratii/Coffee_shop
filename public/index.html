@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./styles/app.css" />
     <title>coffee-shop</title>
     <link rel="icon" href="./images/svgs/app-logo.svg" />
+    <link rel="stylesheet" href="./styles/swiper-bundle.min.css" />
   </head>
   <body class="font-sans bg-gray-100 dark:bg-zinc-800 h-[2000px]">
     <!-- All icon -->
@@ -267,6 +268,19 @@
           stroke-linecap="round"
           stroke-linejoin="round"
           d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"
+        />
+      </symbol>
+      <symbol
+        id="mini-chevron-right"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        class="w-5 h-5"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+          clip-rule="evenodd"
         />
       </symbol>
     </svg>
@@ -760,353 +774,890 @@
         </div>
       </section>
       <section class="products">
-
-        <!-- products container -->
         <div class="container px-4 pt-10 md:pt-64">
-          
           <!-- new products -->
-          <div class="flex items-end justify-between">
-            <div class="tracking-tightest">
-              <h2 class="text-sm xs:text-2xl md:text-3xl dark:text-white">جدید ترین محصولات</h2>
-              <span class="text-xs xs:text-base md:text-lg text-zinc-600 dark:text-white/50">فرآوری شده از دانه قهوه</span>
-            </div>
-            <div class="flex items-center text-orange-300">
-              <span class="tracking-tightest text-xs sm:text-lg">مشاهده همه محصولات</span>
-              <svg class="w-4 h-4">
-                <use href="#mini-chevron-left"></use>
-              </svg>
-            </div>
-          </div>
-
-          <!-- products -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mt-6 child:p-5 child:bg-white child:dark:bg-zinc-700 child:shadow-normal child:rounded-xl">
-            <div>
-              <img class="mx-auto w-64 h-48 sm:h-64" src="./images/products/p4.png" alt="" />
-              <h3 class="text-xl dark:text-white font-medium line-clamp-2">
-                قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
-              </h3>
-              <span
-                class="text-xl block my-4 text-teal-600 dark:text-emerald-500 tracking-tighter"
-              >
-                175,000
-                <span class="text-sm">تومان</span>
-              </span>
-              <div class="flex items-center justify-between">
-                <div class="flex items-center gap-x-2 child:text-zinc-500 child:dark:text-white">
-                  <div
-                    class="flex items-center justify-center bg-gray-200 dark:bg-zinc-600 w-7 h-7 rounded-full"
-                  >
-                    <svg class="w-4 h-4">
-                      <use href="#shopping-cart"></use>
-                    </svg>
-                  </div>
-                  <svg class="w-5 h-5">
-                    <use href="#arrows-right-left"></use>
-                  </svg>
-                </div>
-                <div>
-                  <span>&#9734;</span>
-                  <span class="text-yellow-500">&#9734;</span>
-                  <span class="text-yellow-500">&#9734;</span>
-                  <span class="text-yellow-500">&#9734;</span>
-                  <span class="text-yellow-500">&#9734;</span>
-                </div>
+          <div>
+            <!-- new products title -->
+            <div class="flex items-end justify-between">
+              <div class="tracking-tightest">
+                <h2
+                  class="text-sm xs:text-2xl md:text-3xl lg:text-4xl xl:text-5xl md:mb-3 xl:mb-6 dark:text-white"
+                >
+                  جدید ترین محصولات
+                </h2>
+                <span
+                  class="text-xs xs:text-base md:text-lg lg:text-2xl xl:text-3xl text-zinc-600 dark:text-white/50"
+                  >فرآوری شده از دانه قهوه</span
+                >
+              </div>
+              <div class="flex items-center text-orange-300">
+                <a class="tracking-tightest text-xs sm:text-lg" href="">
+                  مشاهده همه محصولات
+                </a>
+                <svg class="w-4 h-4">
+                  <use href="#mini-chevron-left"></use>
+                </svg>
               </div>
             </div>
-            <div>
-              <img class="w-64 h-48 sm:h-64 mx-auto" src="./images/products/p3.png" alt="" />
-              <h3 class="text-xl dark:text-white font-medium line-clamp-2">
-                قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
-              </h3>
-              <span
-                class="text-xl block my-4 text-red-600 dark:text-emerald-500 tracking-tighter"
-              >
-                فعلا موجود نیست
-              </span>
-              <div class="flex items-center justify-between">
-                <div class="flex items-center gap-x-2 child:text-zinc-500 child:dark:text-white">
-                  <div
-                    class="flex items-center justify-center bg-gray-200 dark:bg-zinc-600 w-7 h-7 rounded-full"
-                  >
-                    <svg class="w-4 h-4">
-                      <use href="#shopping-cart"></use>
-                    </svg>
-                  </div>
-                  <svg class="w-5 h-5 text-black">
-                    <use href="#arrows-right-left"></use>
-                  </svg>
-                </div>
-                <div>
-                  <span>&#9734;</span>
-                  <span>&#9734;</span>
-                  <span class="text-yellow-500">&#9734;</span>
-                  <span class="text-yellow-500">&#9734;</span>
-                  <span class="text-yellow-500">&#9734;</span>
-                </div>
-              </div>
-            </div>
-            <div class="relative">
-              <img class="w-64 h-48 sm:h-64 mx-auto" src="./images/products/p1.png" alt="" />
-              <div
-                class="bg-orange-300 rounded-3xl text-white w-16 py-2 text-center absolute top-4"
-              >
-                12%
-              </div>
-              <h3 class="text-xl dark:text-white font-medium line-clamp-2">
-                قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
-              </h3>
-              <div class="flex items-center gap-x-4">
+            <!-- products -->
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 lg:gap-5 mt-6 child:p-5 child:bg-white child:dark:bg-zinc-700 child:shadow-normal child:rounded-xl"
+            >
+              <div>
+                <img
+                  class="mx-auto w-64 h-48 sm:h-64"
+                  src="./images/products/p4.png"
+                  alt=""
+                />
+                <h3 class="text-xl dark:text-white font-medium line-clamp-2">
+                  قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
+                </h3>
                 <span
                   class="text-xl block my-4 text-teal-600 dark:text-emerald-500 tracking-tighter"
-                >
-                  154,000
-                  <span class="text-sm">تومان</span>
-                </span>
-                <span
-                  class="flex items-center text-lg text-gray-400 decoration-red-800 line-through"
                 >
                   175,000
                   <span class="text-sm">تومان</span>
                 </span>
-              </div>
-              <div class="flex items-center justify-between">
-                <div class="flex items-center gap-x-2 child:text-zinc-500 child:dark:text-white">
+                <div class="flex items-center justify-between">
                   <div
-                    class="flex items-center justify-center bg-gray-200 dark:bg-zinc-600 w-7 h-7 rounded-full"
+                    class="flex items-center gap-x-2 child:text-zinc-500 child:dark:text-white"
                   >
-                    <svg class="w-4 h-4">
-                      <use href="#shopping-cart"></use>
+                    <div
+                      class="flex items-center justify-center bg-gray-200 dark:bg-zinc-600 w-7 h-7 rounded-full"
+                    >
+                      <svg class="w-4 h-4">
+                        <use href="#shopping-cart"></use>
+                      </svg>
+                    </div>
+                    <svg class="w-5 h-5">
+                      <use href="#arrows-right-left"></use>
                     </svg>
                   </div>
-                  <svg class="w-5 h-5 text-black">
-                    <use href="#arrows-right-left"></use>
-                  </svg>
-                </div>
-                <div class="child:text-yellow-500">
-                  <span>&#9734;</span>
-                  <span>&#9734;</span>
-                  <span>&#9734;</span>
-                  <span>&#9734;</span>
-                  <span>&#9734;</span>
+                  <div>
+                    <span>&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div>
-              <img class="w-64 h-48 sm:h-64 mx-auto" src="./images/products/p2.png" alt="" />
-              <h3 class="text-xld dark:text-white font-medium line-clamp-2">
-                قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
-              </h3>
-              <span
-                class="text-xl block my-4 text-teal-600 dark:text-emerald-500 tracking-tighter"
-              >
-                175,000
-                <span class="text-sm">تومان</span>
-              </span>
-              <div class="flex items-center justify-between">
-                <div class="flex items-center gap-x-2 child:text-zinc-500 child:dark:text-white">
+              <div>
+                <img
+                  class="w-64 h-48 sm:h-64 mx-auto"
+                  src="./images/products/p3.png"
+                  alt=""
+                />
+                <h3 class="text-xl dark:text-white font-medium line-clamp-2">
+                  قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
+                </h3>
+                <span
+                  class="text-xl block my-4 text-red-600 dark:text-emerald-500 tracking-tighter"
+                >
+                  فعلا موجود نیست
+                </span>
+                <div class="flex items-center justify-between">
                   <div
-                    class="flex items-center justify-center bg-gray-200 dark:bg-zinc-600 w-7 h-7 rounded-full"
+                    class="flex items-center gap-x-2 child:text-zinc-500 child:dark:text-white"
                   >
-                    <svg class="w-4 h-4">
-                      <use href="#shopping-cart"></use>
+                    <div
+                      class="flex items-center justify-center bg-gray-200 dark:bg-zinc-600 w-7 h-7 rounded-full"
+                    >
+                      <svg class="w-4 h-4">
+                        <use href="#shopping-cart"></use>
+                      </svg>
+                    </div>
+                    <svg class="w-5 h-5 text-black">
+                      <use href="#arrows-right-left"></use>
                     </svg>
                   </div>
-                  <svg class="w-5 h-5 text-black">
-                    <use href="#arrows-right-left"></use>
-                  </svg>
-                </div>
-                <div>
-                  <span>&#9734;</span>
-                  <span class="text-yellow-500">&#9734;</span>
-                  <span class="text-yellow-500">&#9734;</span>
-                  <span class="text-yellow-500">&#9734;</span>
-                  <span class="text-yellow-500">&#9734;</span>
+                  <div>
+                    <span>&#9734;</span>
+                    <span>&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="relative">
-              <img class="w-64 h-48 sm:h-64 mx-auto" src="./images/products/p1.png" alt="" />
-              <div
-                class="bg-orange-300 rounded-3xl text-white w-16 py-2 text-center absolute top-4"
-              >
-                12%
+              <div class="relative">
+                <img
+                  class="w-64 h-48 sm:h-64 mx-auto"
+                  src="./images/products/p1.png"
+                  alt=""
+                />
+                <div
+                  class="bg-orange-300 rounded-3xl text-white w-16 py-2 text-center absolute top-4"
+                >
+                  12%
+                </div>
+                <h3 class="text-xl dark:text-white font-medium line-clamp-2">
+                  قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
+                </h3>
+                <div class="flex items-center gap-x-4">
+                  <span
+                    class="text-xl block my-4 text-teal-600 dark:text-emerald-500 tracking-tighter"
+                  >
+                    154,000
+                    <span class="text-sm">تومان</span>
+                  </span>
+                  <span
+                    class="flex items-center text-lg text-gray-400 decoration-red-800 line-through"
+                  >
+                    175,000
+                    <span class="text-sm">تومان</span>
+                  </span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div
+                    class="flex items-center gap-x-2 child:text-zinc-500 child:dark:text-white"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-gray-200 dark:bg-zinc-600 w-7 h-7 rounded-full"
+                    >
+                      <svg class="w-4 h-4">
+                        <use href="#shopping-cart"></use>
+                      </svg>
+                    </div>
+                    <svg class="w-5 h-5 text-black">
+                      <use href="#arrows-right-left"></use>
+                    </svg>
+                  </div>
+                  <div class="child:text-yellow-500">
+                    <span>&#9734;</span>
+                    <span>&#9734;</span>
+                    <span>&#9734;</span>
+                    <span>&#9734;</span>
+                    <span>&#9734;</span>
+                  </div>
+                </div>
               </div>
-              <h3 class="text-xl dark:text-white font-medium line-clamp-2">
-                قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
-              </h3>
-              <div class="flex items-center gap-x-4">
+              <div>
+                <img
+                  class="w-64 h-48 sm:h-64 mx-auto"
+                  src="./images/products/p2.png"
+                  alt=""
+                />
+                <h3 class="text-xld dark:text-white font-medium line-clamp-2">
+                  قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
+                </h3>
                 <span
                   class="text-xl block my-4 text-teal-600 dark:text-emerald-500 tracking-tighter"
-                >
-                  154,000
-                  <span class="text-sm">تومان</span>
-                </span>
-                <span
-                  class="flex items-center text-lg text-gray-400 decoration-red-800 line-through"
                 >
                   175,000
                   <span class="text-sm">تومان</span>
                 </span>
-              </div>
-              <div class="flex items-center justify-between">
-                <div class="flex items-center gap-x-2 child:text-zinc-500 child:dark:text-white">
+                <div class="flex items-center justify-between">
                   <div
-                    class="flex items-center justify-center bg-gray-200 dark:bg-zinc-600 w-7 h-7 rounded-full"
+                    class="flex items-center gap-x-2 child:text-zinc-500 child:dark:text-white"
                   >
-                    <svg class="w-4 h-4">
-                      <use href="#shopping-cart"></use>
+                    <div
+                      class="flex items-center justify-center bg-gray-200 dark:bg-zinc-600 w-7 h-7 rounded-full"
+                    >
+                      <svg class="w-4 h-4">
+                        <use href="#shopping-cart"></use>
+                      </svg>
+                    </div>
+                    <svg class="w-5 h-5 text-black">
+                      <use href="#arrows-right-left"></use>
                     </svg>
                   </div>
-                  <svg class="w-5 h-5 text-black">
-                    <use href="#arrows-right-left"></use>
-                  </svg>
+                  <div>
+                    <span>&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                  </div>
                 </div>
-                <div>
-                  <span>&#9734;</span>
-                  <span class="text-yellow-500">&#9734;</span>
-                  <span class="text-yellow-500">&#9734;</span>
-                  <span class="text-yellow-500">&#9734;</span>
-                  <span class="text-yellow-500">&#9734;</span>
+              </div>
+              <div class="relative">
+                <img
+                  class="w-64 h-48 sm:h-64 mx-auto"
+                  src="./images/products/p1.png"
+                  alt=""
+                />
+                <div
+                  class="bg-orange-300 rounded-3xl text-white w-16 py-2 text-center absolute top-4"
+                >
+                  12%
+                </div>
+                <h3 class="text-xl dark:text-white font-medium line-clamp-2">
+                  قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
+                </h3>
+                <div class="flex items-center gap-x-4">
+                  <span
+                    class="text-xl block my-4 text-teal-600 dark:text-emerald-500 tracking-tighter"
+                  >
+                    154,000
+                    <span class="text-sm">تومان</span>
+                  </span>
+                  <span
+                    class="flex items-center text-lg text-gray-400 decoration-red-800 line-through"
+                  >
+                    175,000
+                    <span class="text-sm">تومان</span>
+                  </span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div
+                    class="flex items-center gap-x-2 child:text-zinc-500 child:dark:text-white"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-gray-200 dark:bg-zinc-600 w-7 h-7 rounded-full"
+                    >
+                      <svg class="w-4 h-4">
+                        <use href="#shopping-cart"></use>
+                      </svg>
+                    </div>
+                    <svg class="w-5 h-5 text-black">
+                      <use href="#arrows-right-left"></use>
+                    </svg>
+                  </div>
+                  <div>
+                    <span>&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <img
+                  class="w-64 h-48 sm:h-64 mx-auto"
+                  src="./images/products/p2.png"
+                  alt=""
+                />
+                <h3 class="text-xl dark:text-white font-medium line-clamp-2">
+                  قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
+                </h3>
+                <span
+                  class="text-xl block my-4 text-red-600 dark:text-emerald-500 tracking-tighter"
+                >
+                  فعلا موجود نیست
+                </span>
+                <div class="flex items-center justify-between">
+                  <div
+                    class="flex items-center gap-x-2 child:text-zinc-500 child:dark:text-white"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-gray-200 dark:bg-zinc-600 w-7 h-7 rounded-full"
+                    >
+                      <svg class="w-4 h-4">
+                        <use href="#shopping-cart"></use>
+                      </svg>
+                    </div>
+                    <svg class="w-5 h-5 text-black">
+                      <use href="#arrows-right-left"></use>
+                    </svg>
+                  </div>
+                  <div>
+                    <span>&#9734;</span>
+                    <span>&#9734;</span>
+                    <span>&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <img
+                  class="w-64 h-48 sm:h-64 mx-auto"
+                  src="./images/products/p4.png"
+                  alt=""
+                />
+                <h3 class="text-xl dark:text-white font-medium line-clamp-2">
+                  قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
+                </h3>
+                <span
+                  class="text-xl block my-4 text-teal-600 dark:text-emerald-500 tracking-tighter"
+                >
+                  175,000
+                  <span class="text-sm">تومان</span>
+                </span>
+                <div class="flex items-center justify-between">
+                  <div
+                    class="flex items-center gap-x-2 child:text-zinc-500 child:dark:text-white"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-gray-200 dark:bg-zinc-600 w-7 h-7 rounded-full"
+                    >
+                      <svg class="w-4 h-4">
+                        <use href="#shopping-cart"></use>
+                      </svg>
+                    </div>
+                    <svg class="w-5 h-5 text-black">
+                      <use href="#arrows-right-left"></use>
+                    </svg>
+                  </div>
+                  <div class="child:text-yellow-500">
+                    <span>&#9734;</span>
+                    <span>&#9734;</span>
+                    <span>&#9734;</span>
+                    <span>&#9734;</span>
+                    <span>&#9734;</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <img
+                  class="w-64 h-48 sm:h-64 mx-auto"
+                  src="./images/products/p3.png"
+                  alt=""
+                />
+                <h3 class="text-xl dark:text-white font-medium line-clamp-2">
+                  قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
+                </h3>
+                <span
+                  class="text-xl block my-4 text-teal-600 dark:text-emerald-500 tracking-tighter"
+                >
+                  175,000
+                  <span class="text-sm">تومان</span>
+                </span>
+                <div class="flex items-center justify-between">
+                  <div
+                    class="flex items-center gap-x-2 child:text-zinc-500 child:dark:text-white"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-gray-200 dark:bg-zinc-600 w-7 h-7 rounded-full"
+                    >
+                      <svg class="w-4 h-4">
+                        <use href="#shopping-cart"></use>
+                      </svg>
+                    </div>
+                    <svg class="w-5 h-5 text-black">
+                      <use href="#arrows-right-left"></use>
+                    </svg>
+                  </div>
+                  <div>
+                    <span>&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                  </div>
                 </div>
               </div>
             </div>
-            <div>
-              <img class="w-64 h-48 sm:h-64 mx-auto" src="./images/products/p2.png" alt="" />
-              <h3 class="text-xl dark:text-white font-medium line-clamp-2">
-                قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
-              </h3>
-              <span
-                class="text-xl block my-4 text-red-600 dark:text-emerald-500 tracking-tighter"
+            <!-- categories -->
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-16 child:bg-no-repeat child:rounded-2xl h-[250px]"
+            >
+              <div
+                class="flex flex-col justify-center gap-y-5 p-10 categories-img-right text-white"
               >
-                فعلا موجود نیست
-              </span>
-              <div class="flex items-center justify-between">
-                <div class="flex items-center gap-x-2 child:text-zinc-500 child:dark:text-white">
-                  <div
-                    class="flex items-center justify-center bg-gray-200 dark:bg-zinc-600 w-7 h-7 rounded-full"
-                  >
-                    <svg class="w-4 h-4">
-                      <use href="#shopping-cart"></use>
-                    </svg>
-                  </div>
-                  <svg class="w-5 h-5 text-black">
-                    <use href="#arrows-right-left"></use>
-                  </svg>
-                </div>
-                <div>
-                  <span>&#9734;</span>
-                  <span>&#9734;</span>
-                  <span>&#9734;</span>
-                  <span class="text-yellow-500">&#9734;</span>
-                  <span class="text-yellow-500">&#9734;</span>
-                </div>
+                <h2 class="text-3xl sm:text-5xl">انواع قهوه</h2>
+                <span class="text-xl sm:text-2xl">ترکیبی و تک خاستکاه</span>
+              </div>
+              <div
+                class="flex flex-col justify-center gap-y-5 p-10 tracking-tightest categories-img-left text-white"
+              >
+                <h2 class="text-3xl sm:text-5xl">پودرهای فوری</h2>
+                <span class="text-xl sm:text-2xl"
+                  >نسکافه , هات چاکلت , ماسالا</span
+                >
               </div>
             </div>
-            <div>
-              <img class="w-64 h-48 sm:h-64 mx-auto" src="./images/products/p4.png" alt="" />
-              <h3 class="text-xl dark:text-white font-medium line-clamp-2">
-                قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
-              </h3>
-              <span
-                class="text-xl block my-4 text-teal-600 dark:text-emerald-500 tracking-tighter"
-              >
-                175,000
-                <span class="text-sm">تومان</span>
-              </span>
-              <div class="flex items-center justify-between">
-                <div class="flex items-center gap-x-2 child:text-zinc-500 child:dark:text-white">
-                  <div
-                    class="flex items-center justify-center bg-gray-200 dark:bg-zinc-600 w-7 h-7 rounded-full"
-                  >
-                    <svg class="w-4 h-4">
-                      <use href="#shopping-cart"></use>
-                    </svg>
-                  </div>
-                  <svg class="w-5 h-5 text-black">
-                    <use href="#arrows-right-left"></use>
-                  </svg>
-                </div>
-                <div class="child:text-yellow-500">
-                  <span>&#9734;</span>
-                  <span>&#9734;</span>
-                  <span>&#9734;</span>
-                  <span>&#9734;</span>
-                  <span>&#9734;</span>
-                </div>
+            <div
+              class="flex flex-wrap items-center justify-center gap-5 mt-36 md:mt-24 child:flex child:flex-col child:items-center child:gap-y-2 child:dark:text-white"
+            >
+              <div>
+                <img
+                  class="lg:w-56"
+                  src="./images/categories/category1.png"
+                  alt=""
+                />
+                <span
+                  class="block mb-3 text-lg md:text-2xl lg:text-2xl font-medium"
+                  >قهوه دمی و اسپرسو</span
+                >
               </div>
-            </div>
-            <div>
-              <img class="w-64 h-48 sm:h-64 mx-auto" src="./images/products/p3.png" alt="" />
-              <h3 class="text-xl dark:text-white font-medium line-clamp-2">
-                قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
-              </h3>
-              <span
-                class="text-xl block my-4 text-teal-600 dark:text-emerald-500 tracking-tighter"
-              >
-                175,000
-                <span class="text-sm">تومان</span>
-              </span>
-              <div class="flex items-center justify-between">
-                <div class="flex items-center gap-x-2 child:text-zinc-500 child:dark:text-white">
-                  <div
-                    class="flex items-center justify-center bg-gray-200 dark:bg-zinc-600 w-7 h-7 rounded-full"
-                  >
-                    <svg class="w-4 h-4">
-                      <use href="#shopping-cart"></use>
-                    </svg>
-                  </div>
-                  <svg class="w-5 h-5 text-black">
-                    <use href="#arrows-right-left"></use>
-                  </svg>
-                </div>
-                <div>
-                  <span>&#9734;</span>
-                  <span class="text-yellow-500">&#9734;</span>
-                  <span class="text-yellow-500">&#9734;</span>
-                  <span class="text-yellow-500">&#9734;</span>
-                  <span class="text-yellow-500">&#9734;</span>
-                </div>
+              <div>
+                <img
+                  class="lg:w-56"
+                  src="./images/categories/category2.png"
+                  alt=""
+                />
+                <span
+                  class="block mb-3 text-lg md:text-2xl lg:text-2xl font-medium"
+                  >لوازم جانبی و تجهیزات</span
+                >
+              </div>
+              <div>
+                <img
+                  class="lg:w-56"
+                  src="./images/categories/category3.png"
+                  alt=""
+                />
+                <span
+                  class="block mb-3 text-lg md:text-2xl lg:text-2xl font-medium"
+                  >اسپرسو ساز</span
+                >
+              </div>
+              <div>
+                <img
+                  class="lg:w-56"
+                  src="./images/categories/category4.png"
+                  alt=""
+                />
+                <span
+                  class="block mb-3 text-lg md:text-2xl lg:text-2xl font-medium"
+                  >پک تستر قهوه</span
+                >
+              </div>
+              <div>
+                <img
+                  class="lg:w-56"
+                  src="./images/categories/category5.png"
+                  alt=""
+                />
+                <span
+                  class="block mb-3 text-lg md:text-2xl lg:text-2xl font-medium"
+                  >قهوه ترک</span
+                >
               </div>
             </div>
           </div>
 
-          <!-- categories -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-16 child:bg-no-repea child:rounded-2xl h-[250px]">
-            
-            <div class="flex flex-col justify-center gap-y-5 p-10 categories-img-right text-white">
-              <h2 class="text-3xl sm:text-5xl">انواع قهوه</h2>
-              <span class="text-xl sm:text-2xl">ترکیبی و تک خاستکاه</span>
-            </div>
-            <div class="flex flex-col justify-center gap-y-5 p-10 tracking-tightest categories-img-left text-white">
-              <h2 class="text-3xl sm:text-5xl">پودرهای فوری</h2>
-              <span class="text-xl sm:text-2xl">نسکافه , هات چاکلت , ماسالا</span>
+          <!-- Best selling products -->
+          <div class="mt-20">
+            <!-- best selling title -->
+            <div class="flex items-end justify-between">
+              <div>
+                <h2
+                  class="text-sm xs:text-2xl md:text-3xl lg:text-4xl xl:text-5xl md:mb-3 xl:mb-6 dark:text-white"
+                >
+                  محصولات پرفروش
+                </h2>
+                <span
+                  class="text-xs xs:text-base md:text-lg lg:text-2xl xl:text-3xl text-zinc-600 dark:text-white/50"
+                  >پیشنهاد قهوه خورها ...</span
+                >
+              </div>
+              <div
+                class="flex items-center gap-x-2 md:gap-x-4 child:bg-white child:dark:bg-zinc-700 child:shadow-md child:rounded-full child:transition-all child:cursor-pointer"
+              >
+                <svg
+                  class="swiper-button-prev-custom w-6 h-6 xs:w-8 xs:h-8 md:w-12 md:h-12 md:p-2 dark:text-white hover:bg-gray-300 dark:hover:bg-white dark:hover:text-zinc-700"
+                >
+                  <use href="#mini-chevron-right"></use>
+                </svg>
+                <svg
+                  class="swiper-button-next-custom w-6 h-6 xs:w-8 xs:h-8 md:w-12 md:h-12 md:p-2 dark:text-white hover:bg-gray-300 dark:hover:bg-white dark:hover:text-zinc-700"
+                >
+                  <use href="#mini-chevron-left"></use>
+                </svg>
+              </div>
             </div>
 
+            <!-- products -->
+            <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-8 lg:mt-16 gap-8 lg:gap-5 child:shadow-normal child:dark:bg-zinc-700 child:rounded-xl child:p-5">
+              <div class="relative">
+                <img
+                  class="w-72 h-64 md:h-72 mx-auto"
+                  src="./images/products/p5.png"
+                  alt=""
+                />
+                <div
+                  class="bg-orange-300 rounded-3xl text-white w-16 py-2 text-center absolute top-3"
+                >
+                  12%
+                </div>
+                <h3 class="text-xl dark:text-white font-medium line-clamp-2">
+                  قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
+                </h3>
+                <div class="flex items-center gap-x-4">
+                  <span
+                    class="text-xl block my-4 text-teal-600 dark:text-emerald-500 tracking-tighter"
+                  >
+                    154,000
+                    <span class="text-sm">تومان</span>
+                  </span>
+                  <span
+                    class="flex items-center text-lg text-gray-400 decoration-red-800 line-through"
+                  >
+                    175,000
+                    <span class="text-sm">تومان</span>
+                  </span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <div
+                    class="flex items-center gap-x-2 child:text-zinc-500 child:dark:text-white"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-gray-200 dark:bg-zinc-600 w-7 h-7 rounded-full"
+                    >
+                      <svg class="w-4 h-4">
+                        <use href="#shopping-cart"></use>
+                      </svg>
+                    </div>
+                    <svg class="w-5 h-5 text-black">
+                      <use href="#arrows-right-left"></use>
+                    </svg>
+                  </div>
+                  <div class="child:text-yellow-500">
+                    <span>&#9734;</span>
+                    <span>&#9734;</span>
+                    <span>&#9734;</span>
+                    <span>&#9734;</span>
+                    <span>&#9734;</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <img
+                  class="w-72 h-64 md:h-72 mx-auto"
+                  src="./images/products/p6.png"
+                  alt=""
+                />
+                <h3 class="text-xl dark:text-white font-medium line-clamp-2">
+                  قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
+                </h3>
+                <span
+                  class="text-xl block my-4 text-red-600 dark:text-emerald-500 tracking-tighter"
+                >
+                  فعلا موجود نیست
+                </span>
+                <div class="flex items-center justify-between">
+                  <div
+                    class="flex items-center gap-x-2 child:text-zinc-500 child:dark:text-white"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-gray-200 dark:bg-zinc-600 w-7 h-7 rounded-full"
+                    >
+                      <svg class="w-4 h-4">
+                        <use href="#shopping-cart"></use>
+                      </svg>
+                    </div>
+                    <svg class="w-5 h-5 text-black">
+                      <use href="#arrows-right-left"></use>
+                    </svg>
+                  </div>
+                  <div>
+                    <span>&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <img
+                  class="w-72 h-64 md:h-72 mx-auto"
+                  src="./images/products/p7.png"
+                  alt=""
+                />
+                <h3 class="text-xld dark:text-white font-medium line-clamp-2">
+                  قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
+                </h3>
+                <span
+                  class="text-xl block my-4 text-teal-600 dark:text-emerald-500 tracking-tighter"
+                >
+                  175,000
+                  <span class="text-sm">تومان</span>
+                </span>
+                <div class="flex items-center justify-between">
+                  <div
+                    class="flex items-center gap-x-2 child:text-zinc-500 child:dark:text-white"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-gray-200 dark:bg-zinc-600 w-7 h-7 rounded-full"
+                    >
+                      <svg class="w-4 h-4">
+                        <use href="#shopping-cart"></use>
+                      </svg>
+                    </div>
+                    <svg class="w-5 h-5 text-black">
+                      <use href="#arrows-right-left"></use>
+                    </svg>
+                  </div>
+                  <div>
+                    <span>&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <img
+                  class="w-72 h-64 md:h-72 mx-auto"
+                  src="./images/products/p8.png"
+                  alt=""
+                />
+                <h3 class="text-xld dark:text-white font-medium line-clamp-2">
+                  قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
+                </h3>
+                <span
+                  class="text-xl block my-4 text-teal-600 dark:text-emerald-500 tracking-tighter"
+                >
+                  175,000
+                  <span class="text-sm">تومان</span>
+                </span>
+                <div class="flex items-center justify-between">
+                  <div
+                    class="flex items-center gap-x-2 child:text-zinc-500 child:dark:text-white"
+                  >
+                    <div
+                      class="flex items-center justify-center bg-gray-200 dark:bg-zinc-600 w-7 h-7 rounded-full"
+                    >
+                      <svg class="w-4 h-4">
+                        <use href="#shopping-cart"></use>
+                      </svg>
+                    </div>
+                    <svg class="w-5 h-5 text-black">
+                      <use href="#arrows-right-left"></use>
+                    </svg>
+                  </div>
+                  <div>
+                    <span>&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                    <span class="text-yellow-500">&#9734;</span>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Slider main container -->
+            <div class="swiper mt-10">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper p-1">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div class="relative shadow-normal rounded-xl p-2 md:p-5">
+                    <img
+                      class="xs:w-32 xs:h-32 sm:w-72 sm:h-64 md:h-72 mx-auto"
+                      src="./images/products/p5.png"
+                      alt=""
+                    />
+                    <div
+                      class="bg-orange-300 rounded-md md:rounded-3xl text-white w-12 py-1 md:w-16 md:py-2 text-center absolute top-1 md:top-3"
+                    >
+                      12%
+                    </div>
+                    <h3
+                      class="text-sm md:text-xl dark:text-white font-medium line-clamp-2"
+                    >
+                      قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
+                    </h3>
+                    <div class="flex items-center gap-x-4">
+                      <span
+                        class="text-sm md:text-xl block shrink-0 my-4 text-teal-600 dark:text-emerald-500 tracking-tighter"
+                      >
+                        154,000
+                        <span class="text-xs">تومان</span>
+                      </span>
+                      <span
+                        class="flex items-center text-xs shrink-0 md:text-lg text-gray-400 decoration-red-800 line-through"
+                      >
+                        175,000
+                        <span class="text-xs">تومان</span>
+                      </span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <div
+                        class="flex items-center gap-x-2 child:text-zinc-500 child:dark:text-white"
+                      >
+                        <div
+                          class="flex items-center justify-center bg-gray-200 dark:bg-zinc-600 w-7 h-7 rounded-full"
+                        >
+                          <svg class="w-4 h-4  md:w-4 md:h-4">
+                            <use href="#shopping-cart"></use>
+                          </svg>
+                        </div>
+                        <svg class="w-4 h-4  md:w-5 md:h-5 text-black">
+                          <use href="#arrows-right-left"></use>
+                        </svg>
+                      </div>
+                      <div class="child:text-yellow-500 text-xs">
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                        <span>&#9734;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="shadow-normal rounded-xl p-2 md:p-5">
+                    <img
+                      class="xs:w-32 xs:h-32 sm:w-72 sm:h-64 md:h-72 mx-auto"
+                      src="./images/products/p6.png"
+                      alt=""
+                    />
+                    <h3
+                      class="text-sm md:text-xl dark:text-white font-medium line-clamp-2"
+                    >
+                      قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
+                    </h3>
+                    <span
+                      class="text-sm md:text-xl block my-4 text-red-600 dark:text-emerald-500 tracking-tighter"
+                    >
+                      فعلا موجود نیست
+                    </span>
+                    <div class="flex items-center justify-between">
+                      <div
+                        class="flex items-center gap-x-2 child:text-zinc-500 child:dark:text-white"
+                      >
+                        <div
+                          class="flex items-center justify-center bg-gray-200 dark:bg-zinc-600 w-7 h-7 rounded-full"
+                        >
+                          <svg class="w-4 h-4  md:w-4 md:h-4">
+                            <use href="#shopping-cart"></use>
+                          </svg>
+                        </div>
+                        <svg class="w-4 h-4  md:w-5 md:h-5 text-black">
+                          <use href="#arrows-right-left"></use>
+                        </svg>
+                      </div>
+                      <div class="text-xs">
+                        <span>&#9734;</span>
+                        <span class="text-yellow-500">&#9734;</span>
+                        <span class="text-yellow-500">&#9734;</span>
+                        <span class="text-yellow-500">&#9734;</span>
+                        <span class="text-yellow-500">&#9734;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="shadow-normal rounded-xl p-5">
+                    <img
+                      class="w-72 h-64 md:h-72 mx-auto"
+                      src="./images/products/p7.png"
+                      alt=""
+                    />
+                    <h3
+                      class="text-xld dark:text-white font-medium line-clamp-2"
+                    >
+                      قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
+                    </h3>
+                    <span
+                      class="text-xl block my-4 text-teal-600 dark:text-emerald-500 tracking-tighter"
+                    >
+                      175,000
+                      <span class="text-sm">تومان</span>
+                    </span>
+                    <div class="flex items-center justify-between">
+                      <div
+                        class="flex items-center gap-x-2 child:text-zinc-500 child:dark:text-white"
+                      >
+                        <div
+                          class="flex items-center justify-center bg-gray-200 dark:bg-zinc-600 w-7 h-7 rounded-full"
+                        >
+                          <svg class="w-4 h-4">
+                            <use href="#shopping-cart"></use>
+                          </svg>
+                        </div>
+                        <svg class="w-5 h-5 text-black">
+                          <use href="#arrows-right-left"></use>
+                        </svg>
+                      </div>
+                      <div>
+                        <span>&#9734;</span>
+                        <span class="text-yellow-500">&#9734;</span>
+                        <span class="text-yellow-500">&#9734;</span>
+                        <span class="text-yellow-500">&#9734;</span>
+                        <span class="text-yellow-500">&#9734;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="shadow-normal rounded-xl p-5">
+                    <img
+                      class="w-72 h-64 md:h-72 mx-auto"
+                      src="./images/products/p8.png"
+                      alt=""
+                    />
+                    <h3
+                      class="text-xld dark:text-white font-medium line-clamp-2"
+                    >
+                      قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
+                    </h3>
+                    <span
+                      class="text-xl block my-4 text-teal-600 dark:text-emerald-500 tracking-tighter"
+                    >
+                      175,000
+                      <span class="text-sm">تومان</span>
+                    </span>
+                    <div class="flex items-center justify-between">
+                      <div
+                        class="flex items-center gap-x-2 child:text-zinc-500 child:dark:text-white"
+                      >
+                        <div
+                          class="flex items-center justify-center bg-gray-200 dark:bg-zinc-600 w-7 h-7 rounded-full"
+                        >
+                          <svg class="w-4 h-4">
+                            <use href="#shopping-cart"></use>
+                          </svg>
+                        </div>
+                        <svg class="w-5 h-5 text-black">
+                          <use href="#arrows-right-left"></use>
+                        </svg>
+                      </div>
+                      <div>
+                        <span>&#9734;</span>
+                        <span class="text-yellow-500">&#9734;</span>
+                        <span class="text-yellow-500">&#9734;</span>
+                        <span class="text-yellow-500">&#9734;</span>
+                        <span class="text-yellow-500">&#9734;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="shadow-normal rounded-xl p-5">
+                    <img
+                      class="w-72 h-64 md:h-72 mx-auto"
+                      src="./images/products/p8.png"
+                      alt=""
+                    />
+                    <h3
+                      class="text-xld dark:text-white font-medium line-clamp-2"
+                    >
+                      قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی
+                    </h3>
+                    <span
+                      class="text-xl block my-4 text-teal-600 dark:text-emerald-500 tracking-tighter"
+                    >
+                      175,000
+                      <span class="text-sm">تومان</span>
+                    </span>
+                    <div class="flex items-center justify-between">
+                      <div
+                        class="flex items-center gap-x-2 child:text-zinc-500 child:dark:text-white"
+                      >
+                        <div
+                          class="flex items-center justify-center bg-gray-200 dark:bg-zinc-600 w-7 h-7 rounded-full"
+                        >
+                          <svg class="w-4 h-4">
+                            <use href="#shopping-cart"></use>
+                          </svg>
+                        </div>
+                        <svg class="w-5 h-5 text-black">
+                          <use href="#arrows-right-left"></use>
+                        </svg>
+                      </div>
+                      <div>
+                        <span>&#9734;</span>
+                        <span class="text-yellow-500">&#9734;</span>
+                        <span class="text-yellow-500">&#9734;</span>
+                        <span class="text-yellow-500">&#9734;</span>
+                        <span class="text-yellow-500">&#9734;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <div class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 mt-36 md:mt-24 child:flex child:flex-col child:items-center child:gap-y-2 child:dark:text-white">
-            <div>
-              <img class="lg:w-56" src="./images/categories/category1.png" alt="">
-              <span class="block mb-3 text-lg md:text-2xl lg:text-2xl font-medium">قهوه دمی و اسپرسو</span>
-            </div>
-            <div>
-              <img class="lg:w-56" src="./images/categories/category2.png" alt="">
-              <span class="block mb-3 text-lg md:text-2xl lg:text-2xl font-medium">لوازم جانبی و تجهیزات</span>
-            </div>
-            <div>
-              <img class="lg:w-56" src="./images/categories/category3.png" alt="">
-              <span class="block mb-3 text-lg md:text-2xl lg:text-2xl font-medium">اسپرسو ساز</span>
-            </div>
-            <div>
-              <img class="lg:w-56" src="./images/categories/category4.png" alt="">
-              <span class="block mb-3 text-lg md:text-2xl lg:text-2xl font-medium">پک تستر قهوه</span>
-            </div>
-            <div>
-              <img class="lg:w-56" src="./images/categories/category5.png" alt="">
-              <span class="block mb-3 text-lg md:text-2xl lg:text-2xl font-medium">قهوه ترک</span>
-            </div>
-          </div>
-
         </div>
       </section>
     </main>
@@ -1114,5 +1665,30 @@
     <div class="overlay"></div>
 
     <script src="./script/app.js"></script>
+    <script src="./script/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".swiper-button-next-custom",
+          prevEl: ".swiper-button-prev-custom",
+        },
+        breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+      },
+      });
+    </script>
   </body>
 </html>
