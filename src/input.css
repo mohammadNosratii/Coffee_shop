@@ -60,14 +60,4 @@
     background-position: center ;
     background-size: cover;
   }
-  /* @media screen and (min-width:1400px) {
-   .footer-content {
-    @apply flex flex-row items-start justify-between mb-10
-   }
-  }
-  @media screen and (max-width:1400px) {
-    .footer-content {
-      @apply flex flex-col items-center justify-between mb-10
-    }
-  } */
 }
